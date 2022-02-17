@@ -6,4 +6,4 @@ metadata:
 spec:
   type: github
   targets:
-    - https://github.com/ewassef/bones-template-micronaut-service/blob/main/templates/stable/catalog-info.yaml
+    - https://github.com/ewassef/deployment-argo-folder/blob/main/templates/stable/catalog-info.yaml
