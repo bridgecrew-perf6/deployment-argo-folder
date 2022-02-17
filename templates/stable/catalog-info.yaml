@@ -1,17 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: Template
 metadata:
-  name: bones-template-micronaut-service
-  title: Java Micronaut Service Template
-  description: Create a simple Micronaut microservice in Java
+  name: vonage-gitops-domain
+  title: Vonage Domain Deployment Targets
+  description: Create one of more release channels for a domain. Each domain release channel can be tied to multiple clusters
   tags:
     - recommended
-    - java
-    - micronaut
+    - cerebro
 spec:
-  owner: api.system.services.dev@vonage.com
+  owner: architecture@vonage.com
   templater: cookiecutter
-  type: service
+  type: resource
   path: '.'
   schema:
     required:
@@ -26,29 +25,4 @@ spec:
         title: Description
         type: string
         description: Help others understand what this service does
-      ecr_repository:
-        title: ECR Repository
-        type: string
-        description: The ECR Repository (without the registry)
-      java_version:
-        title: Java Version
-        type: string
-        enum: [
-            "11",
-            "15"
-        ]
-        default: "11"
-        description: The Java Version to use
-      gateway_integration:
-        title: API Gateway Integration
-        type: boolean
-        description: Will this service be deployed behind API Gateway?
-      data_module:
-        title: Data Storage module
-        type: string
-        enum: [
-          "SQL",
-          "mock"
-        ]
-        default: "SQL"
-        description: The way of accessing the data
+       
