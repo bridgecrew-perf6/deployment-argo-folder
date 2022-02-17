@@ -1,0 +1,13 @@
+{
+  "component_id": "sms-domain",
+  "owner": "populated by Backstage",
+  "storePath": "populated by Backstage",
+  "project_description": "We promise to update this description /{{cookiecutter.owner}}",
+  "component_id_lower": "{{cookiecutter.component_id|lower}}",
+  "destination": {
+    "git": {
+      "owner": "populated by Backstage",
+      "name": "populated by Backstage"
+    }
+  }
+}

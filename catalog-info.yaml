@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: domain-gitops-templates
+  description: domain-feed
+spec:
+  type: github
+  targets:
+    - https://github.com/ewassef/bones-template-micronaut-service/blob/main/templates/stable/catalog-info.yaml
