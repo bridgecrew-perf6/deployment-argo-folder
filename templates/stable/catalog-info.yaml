@@ -45,7 +45,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - github.com/vonage
+              - github.com/ewassef
  # This template is meant to be used on top of an existing template.
   # By adding the following and fetching from an absolute URL you can
   # add in the docs template
@@ -65,7 +65,7 @@ spec:
       name: Publish
       action: publish:github
       input:
-        allowedHosts: ["github.com"]
+        allowedHosts: ["github.com/ewassef"]
         description: This is ${{ parameters.component_id }}
         repoUrl: ${{ parameters.repoUrl }}
 
