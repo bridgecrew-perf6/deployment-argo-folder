@@ -54,7 +54,7 @@ spec:
       name: Template Docs Skeleton
       action: fetch:template
       input:
-        url: ./skeleton
+        url: ./mainSkeleton
         values:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
