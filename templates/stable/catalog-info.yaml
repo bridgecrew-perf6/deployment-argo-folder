@@ -2,7 +2,8 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: vonage-gitops-domain
-  title: Vonage Domain Deployment Targets
+  title: Documentation Template
+  description: Create a new standalone documentation project
   description: Create one of more release channels for a domain. Each domain release channel can be tied to multiple clusters
   tags:
     - recommended
@@ -11,18 +12,44 @@ spec:
   owner: architecture@vonage.com
   templater: cookiecutter
   type: resource
-  path: '.'
-  schema:
-    required:
-      - component_id
-      - project_description
-    properties:
-      component_id:
-        title: Project Name
-        type: string
-        description: Unique name of the project
-      project_description:
-        title: Description
-        type: string
-        description: Help others understand what this service does
-       
+
+  parameters:
+    - title: Choose the location
+      required:
+        - name
+        - description
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the component
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+        description:
+          title: Description
+          type: string
+          description: A description for the component
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+    - title: Choose a location
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com/vonage
+
+ 
+  output:
+    remoteUrl: ${{ steps.publish.output.remoteUrl }}
+    entityRef: ${{ steps.register.output.entityRef }}
