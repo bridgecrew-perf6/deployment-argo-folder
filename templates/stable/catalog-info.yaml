@@ -10,8 +10,7 @@ metadata:
     - cerebro
 spec:
   owner: architecture@vonage.com
-  templater: cookiecutter
-  type: resource
+  type: documentation
 
   parameters:
     - title: Choose the location
