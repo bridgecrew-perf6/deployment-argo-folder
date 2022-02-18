@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: channel-${{values.component_id | dump}}-latest
-  description: ${{values.project_description | dump}}
+  name: channel-${{values.name | dump}}-latest
+  description: ${{values.description | dump}}
   annotations:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: url:${{"https://" + values.destination.host + "/" + values.destination.owner + "/" + values.destination.repo}}
