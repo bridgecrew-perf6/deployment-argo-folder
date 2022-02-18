@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: vonage-gitops-domain
-  title: Documentation Template 
+  title: Deployment GitOps Template 
   description: Create one of more release channels for a domain. Each domain release channel can be tied to multiple clusters
   tags:
     - recommended
