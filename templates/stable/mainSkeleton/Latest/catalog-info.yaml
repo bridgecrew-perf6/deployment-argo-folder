@@ -1,12 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: channel-{{cookiecutter.component_id | jsonify}}-latest
-  description: {{cookiecutter.project_description | jsonify}}
+  name: channel-{{values.component_id | dump}}-latest
+  description: {{values.project_description | dump}}
   annotations:
-    github.com/project-slug: {{cookiecutter.destination.owner + "/" + cookiecutter.destination.repo}}
-    backstage.io/techdocs-ref: url:{{"https://" + cookiecutter.destination.host + "/" + cookiecutter.destination.owner + "/" + cookiecutter.destination.repo}}
+    github.com/project-slug: {{values.destination.owner + "/" + values.destination.repo}}
+    backstage.io/techdocs-ref: url:{{"https://" + values.destination.host + "/" + values.destination.owner + "/" + values.destination.repo}}
 spec:
   type: channel
   lifecycle: production
-  owner: {{cookiecutter.owner | jsonify}}
+  owner: {{values.owner | dump}}
