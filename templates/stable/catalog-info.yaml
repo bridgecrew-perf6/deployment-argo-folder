@@ -21,7 +21,7 @@ spec:
           type: string
           description: My custom name for the component
           ui:field: MyCustomExtension
-   - title: Fill in some steps
+    - title: Fill in some steps
       required:
         - name
       properties:
