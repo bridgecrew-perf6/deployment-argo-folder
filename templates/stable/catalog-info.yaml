@@ -12,6 +12,15 @@ spec:
   type: resource
 
   parameters:
+    - title: Fill in some steps
+      required:
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: My custom name for the component
+          ui:field: MyCustomExtension
     - title: Choose the location
       required:
         - name
