@@ -21,29 +21,8 @@ spec:
           type: string
           description: My custom name for the component
           ui:field: MyCustomExtension
-    - title: Choose the location
-      required:
-        - name
-        - description
-      properties:
-        name:
-          title: Name
-          type: string
-          description: Unique name of the component
-          ui:field: EntityNamePicker
-          ui:autofocus: true
-        description:
-          title: Description
-          type: string
-          description: A description for the component
-        owner:
-          title: Owner
-          type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds:
-              - Group
+   
+   
     - title: Choose a location
       required:
         - repoUrl
