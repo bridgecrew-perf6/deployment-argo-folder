@@ -10,7 +10,6 @@ metadata:
 spec:
   owner: architecture@vonage.com
   type: resource
-
   parameters:
     - title: Fill in some steps
       required:
@@ -21,12 +20,12 @@ spec:
           type: string
           description: My custom name for the component
           ui:field: MyCustomExtension
-    - title: Fill in some steps
+    - title: Fill in more steps
       required:
-        - name
+        - cre
       properties:
         name:
-          title: Name
+          title: cre
           type: string
           description: My custom name for the component
           ui:field: CustomRepoUrlPickerExtension           
