@@ -11,15 +11,7 @@ spec:
   owner: architecture@vonage.com
   type: resource
   parameters:
-    - title: Fill in some steps
-      required:
-        - name
-      properties:
-        name:
-          title: Name
-          type: string
-          description: My custom name for the component
-          ui:field: CustomRepoUrlPickerExtension           
+           
     - title: Fill in more steps
       required:
         - cre
