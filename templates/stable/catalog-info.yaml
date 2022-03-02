@@ -14,10 +14,10 @@ spec:
            
     - title: Fill in more steps
       required:
-        - cre
+        - releaseChannel
       properties:
-        name:
-          title: cre
+        releaseChannel:
+          title: Choose a Release Channel and Environment
           type: string
           description: My custom name for the component
           ui:field: MyCustomExtension
